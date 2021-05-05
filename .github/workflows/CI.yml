@@ -28,9 +28,9 @@ jobs:
     - name: build app
       run: mvn -Pprod clean install -DskipTests
     - name: Build docker image
-      run: docker image build -t nejishow/library .
+      run: docker image build -t nejishow/game-gen-backend .
     - name: Push docker image
-      run: docker image push nejishow/library
+      run: docker image push nejishow/game-gen-backend
     - name: Login to Heroku Container registry
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
