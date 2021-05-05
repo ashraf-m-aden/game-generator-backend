@@ -1,0 +1,5 @@
+heroku maintenance:on -a fdf-game-generator
+heroku addons:create cleardb:ignite -a [nom de l'app]
+heroku config | findStr CLEARDB_DATABASE_URL
+mysql --host=us-cdbr-iron-east-05.cleardb.net --user=bc71a3b40d6715 --password=c0124eb5 --reconnect heroku_360389a98465754 < C:\Documents\employee.sql
+heroku maintenance:off -a fdf-game-generator
