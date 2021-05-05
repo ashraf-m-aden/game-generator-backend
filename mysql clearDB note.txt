@@ -1,5 +1,7 @@
 heroku maintenance:on -a fdf-game-generator
+.\mvnw -Pprod clean install -DskipTests
 heroku addons:create cleardb:ignite -a [nom de l'app]
-heroku config | findStr CLEARDB_DATABASE_URL
-mysql --host=us-cdbr-iron-east-05.cleardb.net --user=bc71a3b40d6715 --password=c0124eb5 --reconnect heroku_360389a98465754 < C:\Documents\employee.sql
+heroku config -a fdf-game-generator| findStr CLEARDB_DATABASE_URL
+CLEARDB_DATABASE_URL: mysql://beafab873f774a:624d9cd9@us-cdbr-east-03.cleardb.com/heroku_82b6bc578098a5b?reconnect=true
+mysql --host=us-cdbr-east-03.cleardb.com --user=beafab873f774a --password=624d9cd9 --reconnect heroku_82b6bc578098a5b < D:\projet\springboot project\project src\game\setDB.sql
 heroku maintenance:off -a fdf-game-generator
