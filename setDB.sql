@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS `game-generator`;
-CREATE DATABASE  IF NOT EXISTS `game`;
-USE `game`;
+DROP DATABASE IF EXISTS `heroku_82b6bc578098a5b`;
+CREATE DATABASE  IF NOT EXISTS `heroku_82b6bc578098a5b`;
+USE `heroku_82b6bc578098a5b`;
 
 --
 --

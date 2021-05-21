@@ -3,5 +3,6 @@ heroku maintenance:on -a fdf-game-generator
 heroku addons:create cleardb:ignite -a [nom de l'app]
 heroku config -a fdf-game-generator| findStr CLEARDB_DATABASE_URL
 CLEARDB_DATABASE_URL: mysql://beafab873f774a:624d9cd9@us-cdbr-east-03.cleardb.com/heroku_82b6bc578098a5b?reconnect=true
-mysql --host=us-cdbr-east-03.cleardb.com --user=beafab873f774a --password=624d9cd9 --reconnect heroku_82b6bc578098a5b < D:\projet\springboot project\project src\game\setDB.sql
+#positionne toi sur le dossier d setDB puis execute cette commande, fais en sorte que le nom de la db est la mm que heroku_82b6b...
+mysql --host=us-cdbr-east-03.cleardb.com --user=beafab873f774a --password=624d9cd9 --reconnect heroku_82b6bc578098a5b < ./setDB.sql
 heroku maintenance:off -a fdf-game-generator
