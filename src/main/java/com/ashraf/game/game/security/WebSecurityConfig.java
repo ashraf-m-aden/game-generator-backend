@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//disable csrf, authorize /authenticate, but not the others, and do do session
 		http.csrf().disable().cors().configurationSource(request -> {
 		      var cors = new CorsConfiguration();
-		      cors.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:8080", "https://fdf-game-generator.herokuapp.com", "http://127.0.0.1:80"));
+		      cors.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:8080",  "http://127.0.0.1:80"));
 		      cors.setAllowedMethods(List.of("GET","POST", "PUT", "DELETE", "OPTIONS"));
 		      cors.setAllowedHeaders(List.of("*"));
 		      return cors;
